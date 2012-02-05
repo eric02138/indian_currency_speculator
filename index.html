@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title>Currency Speculator</title>
+		<link type="text/css" href="css/custom-theme/jquery-ui-1.8.17.custom.css" rel="stylesheet" />
+		<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui-1.8.17.custom.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+
+				// Datepicker
+				$('#withdrawal_date').datepicker({
+					inline: true,
+					defaultDate: +366
+				});
+
+				$('#usd_in').change(function() {
+					if (!parseFloat($(this).val())) {
+						alert("Not a number!");
+					}
+				});
+
+			});
+		</script>
+		<link type="text/css" href="css/style.css" rel="stylesheet" />
+	</head>
+	<body>
+	<h1>Welcome to Currency Speculator!</h1>
+	<p>Some explanation goes here.</p>
+
+	<form action="index.html" method="get" name="frm" id="main_form">
+
+	<div id="div_dollars">
+		<h2>Initial Investment</h2>
+		<div><label for="usd_in">Input dollars (USD) to invest:</label> <input type="text" name="usd_in" id="usd_in" /> </div>
+		<p>Current rate of exchange: <a href="http://www.x-rates.com/d/INR/USD/data120.html"><span id="exch_rate">48.8047</span> INR to 1 USD</a> (as of <span id="exch_rate_date">2012-02-03</span>)</p>
+		<div><label for="inr_in">Value in Rupees (INR):</label> <span id="inr_in">0.00</span></div>
+	</div>
+
+	<div id="div_account_options">
+		<h2>Financial Institution</h2>
+		<div><label for="acct_type">Select account option:</label>
+		<select name="acct_type" id="acct_type">
+			<option value="">----------------------------------------------</option>
+			<option value="hsbc">HSBC</option>
+			<option value="hdfc">HDFC</option>
+			<option value="icici">ICICI</option>
+		</select>
+		</div>
+
+		<div>
+			<p><a href="http://www.hsbc.co.in/1/2/personal/nri-services/interest-rates-nre-account">HSBC details</a></p>
+			<p><a href="http://www.hdfcbank.com/nri_banking/accounts/rates/nre_interest_rates.htm">HDFC details</a></p>
+			<p><a href="http://www.icicibank.com/pfsuser/icicibank/ibank-nri/nrinewversion/rates/int_nrofd.htm">ICICI details</a></p>
+		</div>
+	</div>
+
+	<div id="div_timeframe">
+		<h2>Duration of Investment</h2>
+		<div><label for="withdrawal_date">Choose a withdrawal date:</label>
+		<div id="withdrawal_date"></div>
+		</div>
+	</div>
+
+
+	<div id="div_outcomes">
+		<h2>Potential Outcomes</h2>
+		<table id="outcomes">
+			<tr>
+				<th>Exchange rate (per 1 USD)</th>
+				<th>Percent Change</th>
+				<th>Dollar outcome</th>
+			</tr>
+			<tr>
+				<td>INR <span>55</span></td>
+				<td><span>40</span>%</td>
+				<td>$<span>A whole lot</span></td>
+			</tr>
+			<tr>
+				<td>INR <span>48.8047</span></td>
+				<td><span>9</span>%</td>
+				<td>$<span>A good amount</span></td>
+			</tr>
+
+			<tr>
+				<td>INR <span>40</span></td>
+				<td><span>-3</span>%</td>
+				<td>$<span>Oops.</span></td>
+			</tr>
+		</table>
+	</div>
+	</form>
+
+	</body>
+</html>

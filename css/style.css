@@ -1,0 +1,41 @@
+/*demo page css*/
+body{ font: 62.5% "Trebuchet MS", sans-serif; margin: 50px;}
+.demoHeaders { margin-top: 2em; }
+#dialog_link {padding: .4em 1em .4em 20px;text-decoration: none;position: relative;}
+#dialog_link span.ui-icon {margin: 0 5px 0 0;position: absolute;left: .2em;top: 50%;margin-top: -8px;}
+ul#icons {margin: 0; padding: 0;}
+ul#icons li {margin: 2px; position: relative; padding: 4px 0; cursor: pointer; float: left;  list-style: none;}
+ul#icons span.ui-icon {float: left; margin: 0 4px;}
+p {
+	font-size: 1.3em;
+	line-height: 1.5;
+	margin: 1em 0;
+}
+
+#div_dollars {
+	width: 40%;
+	float: left;
+	border-left: 1px solid #999;
+	padding-left: 1em;
+}
+
+#div_account_options {
+	width: 40%;
+	float: left;
+	border-left: 1px solid #999;
+	padding-left: 1em;
+}
+
+#div_timeframe {
+	clear: left;
+	width: 100%;
+	border-left: 1px solid #999;
+	padding-left: 1em;
+}
+
+#div_outcomes {
+	clear: left;
+	width: 100%;
+	border-left: 1px solid #999;
+	padding-left: 1em;
+}
